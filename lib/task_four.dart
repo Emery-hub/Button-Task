@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:task_three/Screens/first_screen.dart';
+import 'package:task_three/Screens/second_screen.dart';
 
 class TaskFour extends StatelessWidget {
   const TaskFour({Key? key}) : super(key: key);
@@ -79,7 +81,14 @@ class TaskFour extends StatelessWidget {
                 onPrimary: Colors.white,
                 primary: Color(0xFF0F0F0F),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const FirstScreen(),
+                  ),
+                );
+              },
               child: Text("Get Started"),
             ),
             SizedBox(height: 10),
@@ -90,7 +99,14 @@ class TaskFour extends StatelessWidget {
                 onPrimary: Colors.black,
                 primary: Color(0xFFECE6DF),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const SecondScreen(),
+                  ),
+                );
+              },
               child: Text("Sign In"),
             ),
           ],
